@@ -1,7 +1,7 @@
 ---
 title: "simpleRegress"
-author: "put your name here"
-date: "Fall 2020"
+author: "Ashley Davis"
+date: "Fall 2023"
 output: html_document
 ---
 
@@ -20,6 +20,7 @@ bears$MONTH<- as.factor(bears$MONTH)
 
 ## Model LENGTH ~ NECK  this is an example  
 
+
 ```{r}
 simp <- lm(LENGTH~NECK,data=bears)
 plot(LENGTH~NECK,data=bears)
@@ -27,6 +28,20 @@ abline(simp)
 summary.lm(simp)
 ```
 
+The adjusted R-squared for LENGTH ~ NECK is 0.7476.
 
 ## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
+
+The adjusted R-Squared for LENGTH ~ HEAD LENGTH is 0.8434
+
+## Age
+
+```{r}
+simp <- lm(LENGTH~AGE,data=bears)
+plot(LENGTH~AGE,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+The adjusted R-Square for LENGTH ~ AGE is 0.5073.
 
