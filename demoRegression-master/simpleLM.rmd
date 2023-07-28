@@ -55,3 +55,15 @@ summary.lm(simp)
 ```
 
 The adjusted R-squared for LENGTH ~ HEAD WIDTH is 0.5321
+
+## Weight
+
+```{r}
+simp <- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~WEIGHT,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+The adjusted R-squared for LENGTH ~ WEIGHT is 0.7423
+
